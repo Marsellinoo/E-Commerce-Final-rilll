@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './History.css';
+import '../History.css';
 import { Link } from 'react-router-dom';
 
 const CardHistory = () => {
@@ -16,7 +16,7 @@ const CardHistory = () => {
                 const idMember = localStorage.getItem('memberId'); // Ambil id_member dari local storage
 
                 const [checkoutResponse, productsResponse] = await Promise.all([
-                    axios.get(`${baseApi}/checkout_histories?id_member=${idMember}`, {
+                    axios.get(`${baseApi}/checkout_histories?id_member=${idMember}&status=dibuat`, {
                         headers: { Authorization: `Bearer ${token}` }
                     }),
                     axios.get(`${baseApi}/products`)

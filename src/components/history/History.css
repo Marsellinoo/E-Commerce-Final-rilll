@@ -6,71 +6,68 @@
     background-color: rgb(240, 240, 240);
 }
 
-/* Gaya dasar untuk history-menu */
+.delivery-history-detail {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+
+/* -----------------------------History Menu------------------------------- */
 .history-menu {
     margin: 2rem 0 2rem 5%;
     display: flex;
     flex-direction: row;
-    float: center;
-    width: fit-content;
-    background-color: #ffffff;
     justify-content: center;
+    background-color: #ffffff;
     border-radius: 5px;
-    gap: 7.5px;
+    gap: 5px;
     width: 90%;
     height: 60px;
-}
-
-/* Gaya dasar untuk tombol */
-.history-menu .value {
+  }
+  
+  /* Gaya dasar untuk tombol */
+  .history-menu .value {
     background-color: transparent;
     border: none;
     padding: 10px;
     font-weight: 700;
     color: rgb(0, 0, 0);
     display: flex;
-    position: relative;
-    gap: 40px;
     align-items: center;
     font-size: 1rem;
     cursor: pointer;
     height: 60px;
     border-radius: 4px;
     transition: all 0.2s ease;
-}
-
-.history-menu .value:not(:active):hover,
-.history-menu .value:focus {
+    position: relative;
+    gap: 10px;
+  }
+  
+  .history-menu .value:hover,
+  .history-menu .value:focus {
     background-color: #dadada;
-}
-
-.history-menu .value:focus,
-.history-menu .value:active {
-    background-color: #dadada;
-    outline: none;
-}
-
-.history-menu .value::before {
+  }
+  
+  .history-menu .value.active::before {
     content: "";
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 3px;
     background-color: #000000;
     border-radius: 5px;
-    opacity: 0;
-}
-
-.history-menu .value:focus::before,
-.history-menu .value:active::before {
-    opacity: 1;
-}
-
-.history-menu .value svg {
+  }
+  
+  .history-menu .value svg {
+    color: #818181;
     width: 15px;
-}
-
+  }
+/* -----------------------------Card History Overview------------------------------- */
 .card-history-position {
     display: flex;
     justify-content: center;
@@ -78,10 +75,6 @@
     max-width: 90rem;
     width: 100%;
 }
-
-/* History.css */
-
-/* History.css */
 
 .card-history-container {
     font-family: "Poppins", sans-serif;
@@ -213,3 +206,69 @@
 .button-history:active {
     filter: brightness(.8);
 }
+/* -----------------------------Card History Overview------------------------------- */
+/* -----------------------------Card History Detail------------------------------- */
+.history-detail-card {
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    height: 100%;
+}
+
+.history-detail-card > div {
+    padding: 20px;
+}
+
+.history-status-progress {
+    margin-bottom: 20px;
+}
+
+.history-shipping-address {
+    border-top: 1px solid rgb(163, 163, 163);
+    border-bottom: 1px solid rgb(163, 163, 163);
+    padding: 20px;
+}
+
+.history-shipping-address span {
+    font-weight: 700;
+}
+
+.history-shipping-address div {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.history-product-details {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 1px solid rgb(163, 163, 163); */
+}
+
+.history-product-details img {
+    margin-right: 15px;
+    border-radius: 20px;
+    max-width: 10rem;
+}
+
+.history-product-details div {
+    font-size: 15px;
+}
+
+table {
+}
+
+.history-shopping-summary td:first-child {
+    border-left: none;
+}
+
+.history-shopping-summary td:last-child {
+    border-right: none;
+}
+
+table tbody tr td {
+    text-align: right;
+}
+/* -----------------------------Card History Detail------------------------------- */

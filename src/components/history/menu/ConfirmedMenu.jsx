@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./History.css";
+import "../History.css";
 import { FaRegUser } from "react-icons/fa";
 import { PiNotePencil } from "react-icons/pi";
 import { IoIosCheckboxOutline } from "react-icons/io";
@@ -24,7 +24,7 @@ const MenuHistory = () => {
         <Link
           key={index}
           to={item.link}
-          className={`value ${item.label === "Semua" ? 'active' : ''}`}
+          className={`value ${item.label === "Dikonfirmasi" ? 'active' : ''}`}
         >
           {item.icon}
           {item.label}
