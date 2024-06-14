@@ -1,0 +1,295 @@
+/* style.css */
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cart-items {
+    display: flex;
+    background: #f6f9fc;
+    padding: 50px 0;
+}
+
+.data-container {
+    margin: 20px 5%;
+    width: 40rem;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: white;
+}
+
+.column {
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+}
+
+.column div {
+    flex: 1;
+}
+
+.column div input,
+.data-container div input,
+.data-container select {
+    width: 100%;
+    padding: 5px;
+    margin: 3px 0;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.data-container select {
+    /* background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="%23000000"><path d="M14.5 8.5l-4 4-4-4"></path></svg>'); */
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.data-summary {
+    margin: 20px 5%;
+    width: 33rem;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: white;
+    overflow-y: auto;
+    /* Tambahkan overflow-y dengan nilai auto */
+    max-height: 500px;
+    /* Atur nilai max-height sesuai kebutuhan */
+}
+
+.cart-items .img-checkout {
+    width: 100%;
+    height: 100%;
+}
+
+.checkout-list {
+    background: white;
+    margin-top: 30px;
+    padding: 10px;
+    width: 30rem;
+}
+
+.checkout-details {}
+
+.img-checkout img {
+    width: 100px;
+    height: 100px;
+    align-items: start;
+    justify-self: start;
+}
+
+.cart-items .checkout-details h3 {
+    font-size: 15px;
+}
+
+.cart-items .checkout-details h2 {
+    font-size: 15px;
+    margin-top: 45px;
+    font-weight: 600;
+    color: #e94560;
+}
+
+.cart-items .checkout-details p {
+    font-size: 15px;
+    color: rgb(185, 185, 185);
+}
+
+.cart-items span {
+    font-size: 15px;
+}
+
+.payment-method {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.payment-method label {
+    margin: 0.5rem;
+}
+
+.payment-method input[type="radio"] {
+    display: none;
+}
+
+.payment-method input[type="radio"]+span {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    border-radius: 0.375em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: 0.05em;
+    color: #3e4963;
+    transition: background-color 0.5s ease;
+}
+
+.payment-method input[type="radio"]:checked+span {
+    background-color: #dee7ff;
+    box-shadow: 0 0 0 0.0625em #0043ed;
+    color: #0043ed;
+}
+
+.delivery-method {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.delivery-method label {
+    margin: 0.5rem;
+}
+
+.delivery-method input[type="radio"] {
+    display: none;
+}
+
+.delivery-method input[type="radio"]+span {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0.375em .75em;
+    font-size: 15px;
+    font-weight: 100;
+    border-radius: 0.375em;
+    box-shadow: 0 0 0 0.0625em #b5bfd9;
+    letter-spacing: 0.05em;
+    color: #3e4963;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+.delivery-method input[type="radio"]:checked+span {
+    background-color: #dee7ff;
+    box-shadow: 0 0 0 0.0625em #0043ed;
+    color: #0043ed;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.button-checkout {
+    background: #51ff00;
+    color: white;
+    font-family: inherit;
+    padding: 0.20em;
+    padding-left: 1em;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 0.3em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #51ff00;
+    overflow: hidden;
+    position: relative;
+    height: 2em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+.button-checkout .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.7em;
+    width: 2.2em;
+    border-radius: 0.3em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #51ff00;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.button-checkout:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.button-checkout .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #51ff00;
+}
+
+.button-checkout:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.button-checkout:active .icon {
+    transform: scale(0.95);
+}
+
+.summary-card {
+    margin: 20px 5%;
+    width: 33rem;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+.summary-card h3 {
+    margin-bottom: 20px;
+}
+
+.summary-details p {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0; /* Sesuaikan dengan kebutuhan Anda */
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Untuk efek gelap di belakang pop up */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Mengatur nilai z-index agar pop up berada di atas semua elemen */
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-field.error {
+    border-color: red;
+}
+
+  

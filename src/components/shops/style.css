@@ -1,0 +1,184 @@
+.shop .category {
+  padding: 30px;
+  height: 90vh;
+}
+.chead h1 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.chead h1:nth-child(2) {
+  opacity: 0.5;
+  border-left: 3px solid rgba(0, 0, 0, 0.5);
+  padding-left: 70px;
+}
+.shop .category .box {
+  background-color: #f6f9fc;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.shop .category img {
+  width: auto;
+  height: auto;
+}
+.shop .category .box:hover {
+  background-color: #fff;
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+.shop .box2 {
+  margin-top: 100px !important;
+  text-align: center;
+}
+.shop .category button {
+  padding: 10px;
+  background: none;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.shop .contentWidth {
+  margin-left: 30px;
+}
+
+.grid1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.shop .product img {
+
+}
+.shop .product {
+  transition: 0.5s;
+}
+.shop .product:hover {
+  box-shadow: rgb(43 52 69 / 10%) 0px 4px 16px;
+}
+
+.product-title h1 {
+  font-size: 60px;
+  font-family: "Bebas Neue", sans-serif;
+  text-shadow: 4px 4px 5px rgb(44, 44, 44);
+}
+
+.button-cart {
+  --color: #5AB2FF;
+  padding: 0.4em 1.7em;
+  background-color: transparent;
+  border-radius: .3em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+ }
+ 
+ .button-cart::before, .button-cart::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+ }
+ 
+ .button-cart::before {
+  top: -1em;
+  left: -1em;
+ }
+ 
+ .button-cart::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+ }
+ 
+ .button-cart:hover::before, .button-cart:hover::after {
+  height: 410px;
+  width: 410px;
+ }
+ 
+ .button-cart:hover {
+  color: rgb(255, 255, 255);
+ }
+ 
+ .button-cart:active {
+  filter: brightness(.8);
+ }
+ .radio-button-container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.radio-button {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio-button__input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-button__label {
+  display: inline-block;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  position: relative;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.radio-button__custom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #555;
+  transition: all 0.3s ease;
+}
+
+.radio-button__input:checked + .radio-button__label .radio-button__custom {
+  background-color: #e94560;
+  border-color: transparent;
+  transform: scale(0.8);
+  box-shadow: 0 0 20px #e94560;
+}
+
+.radio-button__input:checked + .radio-button__label {
+  color: #e94560;
+}
+
+.radio-button__label:hover .radio-button__custom {
+  transform: scale(1.2);
+  border-color: #e94560;
+  box-shadow: 0 0 20px #e94560;
+}
+
+
+
+
+
+
+ 
